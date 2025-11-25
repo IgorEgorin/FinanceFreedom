@@ -13,9 +13,10 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class SmokePositiveTest {
 
-    @BeforeAll
-    public static void setup() {
-        //
+
+    @Test
+    public void testSmoke(){
+//
 //        Configuration.browser = "chrome";
 //        ChromeOptions options = new ChromeOptions();
 //        options.addArguments("--headless");
@@ -25,11 +26,6 @@ public class SmokePositiveTest {
         String url = "https://systeme.io/blog/cost-of-online-course";
         System.out.println("Откроем страницу " + url);
         open(url);
-
-    }
-
-    @Test
-    public void testSmoke(){
 
         SelenideElement frameToWait = $(By.xpath("//iframe[@loading='lazy']"));
         SelenideElement btnPopUpClose = $(By.xpath("//button[@data-testid='popup-close-icon']"));

@@ -19,5 +19,4 @@ COPY --from=build pom.xml ./
 COPY --from=build src ./src
 
 # Запуск приложения
-EXPOSE 8080
 CMD ["mvn", "test", "-Dtest=SmokePositiveTest"]
